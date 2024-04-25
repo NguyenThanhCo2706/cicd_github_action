@@ -14,6 +14,8 @@ app.post('/items', addItem);
 app.put('/items/:id', updateItem);
 app.delete('/items/:id', deleteItem);
 
+app.get('/cow', (req, res)=> {res.json({cow: "Day la Cow"})});
+
 db.init().then(() => {
     app.listen(3000, () => console.log('Listening on port 3000'));
 }).catch((err) => {
